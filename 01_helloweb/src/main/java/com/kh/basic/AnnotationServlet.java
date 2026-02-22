@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Annotation
+ * Servlet implementation class AnnotationServlet
  */
-@WebServlet(urlPatterns = {"/second", "/second.do", "/seconds.*"})
+@WebServlet( urlPatterns = {"/second", "/second.do","/seconds.*"})
 public class AnnotationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

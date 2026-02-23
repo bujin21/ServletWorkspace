@@ -78,7 +78,8 @@
 	<a href="/jsp/action/standard/01_include.jsp" >01_jsp:include</a>
 	<a href="/jsp/action/standard/02_forward.jsp">02_jsp:forward</a>
 	
-	
+	<h1>2. 커스텀 액션 태그</h1>
+	<a href="/jsp/action/custom/jstl.jsp">JSTL</a>
 	
 
 

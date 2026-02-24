@@ -28,7 +28,6 @@
 	<script>
 		//첫 요청
 		function showList(){
-			
 			$.ajax({
 				url : '/ajax/board/list',
 				success : function(data){
@@ -55,6 +54,25 @@
 				}
 			})
 		});
+		
+		$(".outer").on("click","table.list-table > tbody > tr", function(){
+			//console.log(111);
+			// 현재 선택된 tr태그
+			// this, event.target
+			var bno = $(this).children().eq(0).text();
+			//console.log(bno);
+			
+			$.ajax({
+				url : "/ajax/board/view",
+				data : {bno},//{bno : bno}
+				success : function(data){
+					$(".outer").html(data);
+				},
+				error : function(xhr){
+					console.log(xhr);
+				}
+			})
+		})
 		
 		
 	</script>

@@ -22,4 +22,25 @@
 		</th>
 	</tr>
 </table>
-
+<script>
+$(".outer").on("click",".enroll-table #btn", function(){
+	// 백엔드에 전송할 데이터
+	var data = {
+		title : $("[name=title]").val() ,
+		writer : $("[name=nickname]").val() ,
+		content : $("[name=content]").val()
+	};
+	$.ajax({
+		url : '/ajax/board/insert',
+		data,
+		method : "post",
+		success : function(){
+			alert("저장성공!");
+			showList();
+		},
+		error : function(err){
+			console.log(err);
+		}
+	});
+});
+</script>
